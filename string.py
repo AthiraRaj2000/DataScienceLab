@@ -1,13 +1,13 @@
-print("Demo of basic data types:String")
+print("Demo of basic data types:string")
 s="hello"
 t="world"
-print("String1:",s)
-print("String2:",t)
+print("string1:",s)
+print("string2:",t)
 d=s+" "+t
-print("String Concatenation:",d)
-print("Capitalize:",d.capitalize())
-print("Converted Uppercase:",s.upper())
-print("Right justify a string:",s.rjust(7))
-print("String at center:",s.center(7))
-print("After replacing| with ell:",s.replace('1','(ell)'))
-print("String after stripping leading and trailing white spaces:",'word'.strip())
+print("string concatenation:",d)
+print("capitalize:",d.capitalize())
+print("converted to upper case:",s.upper())
+print("right justify a string:",s.rjust(7))
+print("string at center:",s.center(7))
+print("After replacing l with ell:",s.replace('l','(ell)'))
+print("string after striping leading and trailing white spaces:",'world'.strip())
