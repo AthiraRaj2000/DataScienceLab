@@ -14,3 +14,25 @@ print("Shape of matrix sigma : ",s.shape)
 print("")
 print("Transpose Matrix, VT = ",VT) 
 print("Shape of matrix VT: ",VT.shape)
+
+
+
+                                     OUTPUT
+
+
+A= [[1 2]
+ [3 4]
+ [5 6]]
+Shape of array A:  (3, 2)
+
+U =  [[-0.2298477   0.88346102  0.40824829]
+ [-0.52474482  0.24078249 -0.81649658]
+ [-0.81964194 -0.40189603  0.40824829]]
+Shape of matrix U:  (3, 3)
+
+Sigma (diagonal matrix), s =  [9.52551809 0.51430058]
+Shape of matrix sigma :  (2,)
+
+Transpose Matrix, VT =  [[-0.61962948 -0.78489445]
+ [-0.78489445  0.61962948]]
+Shape of matrix VT:  (2, 2)
