@@ -1,0 +1,112 @@
+ 
+#import libraries
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import datasets, linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+
+
+
+# Load the diabetes dataset
+diabetes_X, diabetes_y = datasets.load_diabetes(return_X_y=True)
+
+
+ 
+# Use only one feature
+diabetes_X = diabetes_X[:, np.newaxis, 2]
+
+# Split the data into training/testing sets
+diabetes_X_train = diabetes_X[:-20]
+diabetes_X_test = diabetes_X[-20:]
+
+# Split the targets into training/testing sets
+diabetes_y_train = diabetes_y[:-20]
+diabetes_y_test = diabetes_y[-20:]
+
+
+ 
+# Create linear regression object
+regr = linear_model.LinearRegression()
+
+# Train the model using the training sets
+regr.fit(diabetes_X_train, diabetes_y_train)
+
+
+
+ 
+# Make predictions using the testing set
+diabetes_y_pred = regr.predict(diabetes_X_test)
+
+
+ 
+# The coefficients
+print('Coefficients: \n', regr.coef_)
+# The mean squared error
+print('Mean squared error: %.2f'
+  mport pandas as pd
+# change display options in pandas
+# read a dataset of alcohol consumption into a DataFrame
+drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+print("Shape: ",drinks.shape)
+print()
+# check the current setting for the 'max_rows' option
+pd.get_option('display.max_rows')
+print(drinks)
+print()
+# overwrite the current setting so that all rows will be displayed
+pd.set_option('display.max_rows',2)
+print(drinks)
+print()
+# reset the 'max_rows' option to its default
+pd.reset_option('display.max_rows')
+print(drinks)
+print()
+# add two meaningless columns to the drinks DataFrame
+drinks['x'] = drinks.wine_servings * 1000
+drinks['y'] = drinks.total_litres_of_pure_alcohol * 1000
+print(drinks.head())
+print()
+31# use a Python format string to specify a comma as the thousands separator
+pd.set_option('display.float_format', '{:,}'.format)
+print(drinks.head())
+print()
+# read the training dataset from Kaggle's Titanic competition into a DataFrame
+train = pd.read_csv('http://bit.ly/kaggletrain')
+# an ellipsis is displayed in the 'Name' cell of row 1 because of the 'max_colwidth' option
+pd.get_option('display.max_colwidth')
+print(train.head())
+print()
+# overwrite the current setting so that more characters will be displayed
+pd.set_option('display.max_colwidth', 1000)
+print(train.head())
+print()
+
+    % mean_squared_error(diabetes_y_test, diabetes_y_pred))
+# The coefficient of determination: 1 is perfect prediction
+print('Coefficient of determination: %.2f'
+      % r2_score(diabetes_y_test, diabetes_y_pred)) 
+
+#Scatter Plot
+plt.scatter(diabetes_X_test, diabetes_y_test,  color='black')
+plt.plot(diabetes_X_test, diabetes_y_pred, color='blue', linewidth=3)
+plt.xticks(())
+plt.yticks(())
+plt.show()
+
+
+
+
+
+
+                                                                
+
+
+
+
+
+
+
+
+
+
+
